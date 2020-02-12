@@ -44,6 +44,9 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ asset('contacts') }}">TEST </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ asset('contacts') }}">Контакты </a>
                         </li>
                         @guest
@@ -65,6 +68,11 @@
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
+                                </a>
+
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                    "ВОВА   "
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
