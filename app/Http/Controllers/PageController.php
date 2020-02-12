@@ -16,4 +16,9 @@ class PageController extends Controller
         $obj = Maintext::where('url', $file)->first();
         return view('page', compact('obj'));
     }
+
+    public function getMain()
+    {
+        return view('index');
+    }
 }
