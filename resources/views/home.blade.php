@@ -13,8 +13,9 @@
                         {{ session('status') }}
                     </div>
                     @endif
+                    <p>Вы вошли под именем <strong>{{ Auth::user()->name }}</strong>.
+                    </p>
 
-                    Вы вошли под именем {{ Auth::user()->name }}
 
                 </div>
                 <div class="card-footer">

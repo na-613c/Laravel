@@ -1,12 +1,12 @@
 @extends('layouts.base')
 
 @section('content')
-<section class="jumbotron text-center shadow-sm">
+<div class="py-5 my-5 text-center shadow-sm" style="background-color: rgba(255,255,255,0.7);">
   <div class="container">
     <h1 class="jumbotron-heading">ГЛАВНАЯ СТРАНИЦА</h1>
-    <p class="lead text-muted">Добро пожалавать на наш сайт. Здесь вы можите добавить или просмотреть отзывы о других сайтах.</p>
+    <p class="lead">Добро пожалавать на наш сайт. Здесь вы можите добавить или просмотреть отзывы о других сайтах.</p>
   </div>
-</section>
+</div>
 
 <div class="container">
   <div class=" p-5 bg-light align-center shadow-sm rounded">

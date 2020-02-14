@@ -174,15 +174,20 @@
     @yield('content')
   </main>
 
-  <!-- <footer class="text-muted">
-    <div class="container">
-      <p class="float-right">
-        <a href="#">Back to top</a>
-      </p>
-      <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-      <p>New to Bootstrap? <a href="https://getbootstrap.com">Visit the homepage</a> or read our <a href="/docs/4.4/getting-started/introduction/">getting started guide</a>.</p>
+  <!-- Footer -->
+  <footer class="page-footer font-small bg-dark mt-5 text-white">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-4">© 2020 Copyright:
+      <a href="https://vk.com/shavlovsky98"> Иван </a>
+      from
+      <a href="https://www.bsuir.by/"> БГУИР </a>
+
     </div>
-  </footer> -->
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
 
   <script src="{{ asset('js/jquery-3.4.1.min.js')}}"></script>
   <script src="{{ asset('bootstrap/js/bootstrap.min.js')}}"></script>
