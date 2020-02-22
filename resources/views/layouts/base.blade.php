@@ -80,7 +80,7 @@
 
 </head>
 
-<body onload="startBG()">
+<body onload="startBG()" style="height: 100vh;" class="d-flex flex-column">
 
   <script>
     (function(i, s, o, g, r, a, m) {
@@ -175,7 +175,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="page-footer font-small bg-dark mt-5 text-white">
+  <footer class="mt-auto bd-highlight page-footer font-small bg-dark mt-5 text-white">
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-4">© 2020 Copyright:

@@ -10,12 +10,31 @@ class PageController extends Controller{
     public function getIndex($url = null){
 
         if (!$url) {
-            $file = 'index';
+            $file = 'index';        
         } else {
             $file = $url;
         }
 
+
         $obj = Maintext::where('url', $file)->first();
+        $comm = Comment::where('site', $file)->first();
+
+    
+
+
+        if (isset($obj)) {
+            $comm = null;
+            return view('page', compact('obj', 'comm'));
+        } 
+        
+        if (isset($comm)) {
+            $obj = null;
+            return view('page', compact('comm', 'obj'));
+        }
+
+        //$obj = Comment::where('site',$url)->first();
+
+        //dd($obj);
 
         // $url = asset($file);
         // dd($url);
@@ -26,7 +45,7 @@ class PageController extends Controller{
         
         
 
-        return view('page', compact('obj'));
+        // return view('page', compact('obj'));
     }
 
     public function getMain()

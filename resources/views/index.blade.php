@@ -1,14 +1,14 @@
 @extends('layouts.base')
 
 @section('content')
-<div class="py-5 my-5 text-center shadow-sm" style="background-color: rgba(255,255,255,0.7);">
+<div class="py-5 mt-3 mb-5 text-center shadow-sm" style="background-color: rgba(255,255,255,0.7);">
   <div class="container">
     <h1 class="jumbotron-heading">ГЛАВНАЯ СТРАНИЦА</h1>
     <p class="lead">Добро пожалавать на наш сайт. Здесь вы можите добавить или просмотреть отзывы о других сайтах.</p>
   </div>
 </div>
 
-<div class="container">
+<div class="container mb-5">
   <div class=" p-5 bg-light align-center shadow-sm rounded">
     <div class="row">
       <div class="col-md-4">

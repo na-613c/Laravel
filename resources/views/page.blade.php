@@ -1,5 +1,7 @@
-@extends('layouts.base')
-@section('content')
+@extends('proxy')
+@section('proxy')
+
+@if ($obj !== null))
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -19,5 +21,22 @@
         </div>
     </div>
 </div>
+@endif
+
+@if ($comm !== null)
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="">
+                <h2>{{$comm->name ?? ""}}</h2>
+                <div class="card-body">
+                    {{ $comm->message}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endif
 
 @endsection
