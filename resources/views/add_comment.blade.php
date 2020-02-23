@@ -6,7 +6,7 @@
         background-color: rgba(255,255,255,0.7);">
     <div class=" py-5 text-center">
 
-        <h4>Форма создания новой статьи</h4>
+        <h2>Форма создания новой статьи</h2>
         <br>
         <form action="{{asset('add')}}" method="post">
             {!!csrf_field()!!}
