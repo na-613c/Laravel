@@ -172,9 +172,12 @@
             </li>
             @endguest
 
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Найти" aria-label="Найти">
-              <button class="btn  my-2 my-sm-0" id="search" type="submit">Поиск</button>
+            <form action="{{asset('search')}}" method="post" class="form-inline">
+              {!!csrf_field()!!}
+              <div class="form-group">
+                <input type="search" name="search" class="form-control mr-sm-2" placeholder="Найти" aria-label="Найти">
+              </div>
+              <button type="submit" class="btn  my-2 my-sm-0" id="search">Поиск</button>
             </form>
           </ul>
         </div>
@@ -190,15 +193,26 @@
 
   <!-- Footer -->
   <footer class="mt-auto bd-highlight page-footer font-small bg-dark mt-5 text-white">
+    <div class="row justify-content-end  mx-0">
+      <div class="col-4">
+        <div class="footer-copyright text-center py-4">
+          © 2020 Copyright:
+          <a href="https://vk.com/shavlovsky98" target="_blank"> Иван </a>
+          from
+          <a href="https://www.bsuir.by/" target="_blank"> БГУИР </a>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="footer-copyright text-right py-4 pr-4">
+          Проект на GitHub:
+          <a href="https://github.com/na-613c/Laravel" target="_blank"> github.com/na-613c/Laravel </a>
+        </div>
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-4">© 2020 Copyright:
-      <a href="https://vk.com/shavlovsky98" target="_blank"> Иван </a>
-      from
-      <a href="https://www.bsuir.by/" target="_blank"> БГУИР </a>
 
+      </div>
     </div>
     <!-- Copyright -->
+
 
   </footer>
   <!-- Footer -->

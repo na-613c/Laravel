@@ -19,7 +19,9 @@
                     <div class="col-4">
                         <h2>
                             {{$obj->name ?? ""}}
-                            {{$comm->name ?? ""}}
+                            <a class="text-reset text-decoration-none" href="{{$comm->site ?? ''}}" target="_blank">
+                                {{$comm->name ?? ""}}
+                            </a>
                         </h2>
                     </div>
                     <div class="col-4">
@@ -93,7 +95,7 @@
             <div class="card-body text-justify">
                 <p>
                     Данный сайт распологается по адресу
-                    <a href="{{$comm->url}}" target="_blank">{{$comm->url}}</a>
+                    <a href='{{$comm->url?? "#"}}' target="_blank">{{$comm->url?? ""}}</a>
                 </p>
                 {!!$obj->body ?? ""!!}
                 {!!$comm->message?? ""!!}

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Comment;
 use App\MainText;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\SearchRequest;
+
 
 class PageController extends Controller{
 
@@ -28,4 +30,26 @@ class PageController extends Controller{
         $comments = $comments->reverse();
         return view('index', compact('comments'));
     }
+
+    public function getSearch()
+    {
+       
+    }
+
+    public function postSearch(SearchRequest $request)
+    {   
+        $name = $request['search'];
+
+        $obj = Comment::where('name', $name)->first();
+
+        if(isset($obj)){
+            $url = $obj['site'];
+            return redirect($url);
+        } else{
+            return view('exist',  compact('name'));
+        }  
+
+    }
+
+    
 }
