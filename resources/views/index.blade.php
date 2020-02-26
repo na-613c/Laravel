@@ -24,8 +24,14 @@
               {{$comment->message}}
             </p>
             <div class="d-flex justify-content-between align-items-center">
+              <!-- <div class="row">
+                <div class="col px-0 "> -->
               <a href="/{{$comment->site}}" class="btn btn-primary stretched-link">Перейти к статье</a>
+              <!-- </div>
+                <div class="col px-0 text-right"> -->
               <small class="text-muted">{{$comment->updated_at}}</small>
+              <!-- </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -35,10 +41,10 @@
 
 
       <script>
-        let id = 0;
+        let id = 20;
 
         function new_img() {
-          id++;
+          id--;
 
           const rnd = Math.floor(Math.random() * Math.floor(988));
           const real_id = "#" + id;
@@ -50,8 +56,8 @@
               $(real_id).attr("src", imgUrl)
             });
 
-            new_img();
           }
+          if (id > 0) new_img();
         }
 
         new_img();

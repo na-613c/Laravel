@@ -10,26 +10,22 @@ class PageController extends Controller{
 
     public function getIndex($url = null){
 
-        if (!$url) {
-            $file = 'index';        
-        } else {
-            $file = $url;
-        }
+        !$url ? $file = 'index' : $file = $url;
 
         $obj = Maintext::where('url', $file)->first();
         $comm = Comment::where('site', $file)->first();
 
-        if (isset($obj)) {
-            $comm = null;
-            return view('page', compact('obj', 'comm'));
-        } else if (isset($comm)) {
-            $obj = null;
-            return view('page', compact('comm', 'obj'));
-        } else return view('exist');
+        $view_page = view('page', compact('obj', 'comm'));
+        $view_error = view('exist');
+
+        isset($obj) || isset($comm) ? $page = $view_page : $page = $view_error;
+        return $page;
+
     }
 
     public function getMain(){
         $comments = DB::table('comments')->get();
-        return view('index',compact('comments'));
+        $comments = $comments->reverse();
+        return view('index', compact('comments'));
     }
 }

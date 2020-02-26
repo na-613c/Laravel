@@ -12,7 +12,7 @@
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-
+  <link rel="shortcut icon" href="https://lh3.googleusercontent.com/proxy/O2cnpQtgUikcMp8Y6qv_9AdtjDW7WJ7H6-dzv3giwkO8XSmiWCsrk5C0NUXk-hoaEMIDiBpi19k0eXaNn87x6OGLg3K3JK6lM5XnoAkpIidDnU2z-Rh3UTnko2nA" type="image/x-icon">
 
   <!-- Styles -->
   <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -193,9 +193,9 @@
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-4">© 2020 Copyright:
-      <a href="https://vk.com/shavlovsky98"> Иван </a>
+      <a href="https://vk.com/shavlovsky98" target="_blank"> Иван </a>
       from
-      <a href="https://www.bsuir.by/"> БГУИР </a>
+      <a href="https://www.bsuir.by/" target="_blank"> БГУИР </a>
 
     </div>
     <!-- Copyright -->
@@ -205,8 +205,8 @@
 
   <script src="{{ asset('js/jquery-3.4.1.min.js')}}"></script>
   <script src="{{ asset('bootstrap/js/bootstrap.min.js')}}"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="{{ asset('bootstrap/js/popper.js')}}"></script>
+  <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
 </body>
 

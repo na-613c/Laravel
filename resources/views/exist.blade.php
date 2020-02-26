@@ -14,8 +14,8 @@
                             <h4>
                                 Ссылка
                                 <span class="font-italic text-danger">
-                                    <?php echo $_SERVER['REQUEST_URI']; ?>
-                                </span>
+                                    laravel<?php echo $_SERVER['REQUEST_URI']; ?>
+                                </span><br>
                                 не существует.
                             </h4>
                             <span> Возможно произошло следующее:</span>
