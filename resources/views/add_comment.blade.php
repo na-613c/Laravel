@@ -14,28 +14,29 @@
                 <div class="col-md-4 mb-3">
                     <div class="form-group">
                         <label for="name">Название статьи:</label>
-                        <input type="name" name="name" class="border border-dark form-control" id="name" placeholder="Название статьи">
+                        <input autocomplete="off" type="name" name="name" class="border border-dark form-control" id="name" placeholder="Название статьи">
                         @error("name")
                         {{$message}}
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="email1">E-mail:</label>
-                        <input type="email" name="email" class="border border-dark form-control" id="email1" placeholder="Почта">
+                        <datalist id="my_data_email"></datalist>
+                        <input autocomplete="off" list="my_data_email" type="email" name="email" class="border border-dark form-control" id="email1" placeholder="Почта">
                         @error("email")
                         {{$message}}
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="url">URL сайта на который вы пишите отзыв:</label>
-                        <input type="url" name="url" class="border border-dark form-control" id="url" placeholder="URL сайта">
+                        <input autocomplete="off" type="url" name="url" class="border border-dark form-control" id="url" placeholder="URL сайта">
                         @error("url")
                         {{$message}}
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="site">URL по которому бедет находиться статья:</label>
-                        <input type="site" name="site" class="border border-dark form-control" id="site" placeholder="URL статьи">
+                        <input autocomplete="off" type="site" name="site" class="border border-dark form-control" id="site" placeholder="URL статьи">
                         @error("site")
                         {{$message}}
                         @enderror

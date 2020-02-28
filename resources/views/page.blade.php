@@ -1,15 +1,7 @@
 @extends('layouts.base')
 @section('content')
 
-<script>
-    $(function() {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-
-    $('#myModal').on('shown.bs.modal', function() {
-        $('#myInput').trigger('focus')
-    })
-</script>
+<script src="{{asset('js/modal.js')}}"></script>
 
 <div class="container text-center shadow-sm rounded my-5 py-5 mb-5" style="background-color: rgba(255,255,255,0.9);">
     <div class="row justify-content-center">
@@ -25,8 +17,7 @@
                         </h2>
                     </div>
                     <div class="col-4">
-
-                        @if( (Auth::user()->email??"") === ($comm->email??"") )
+                        @if( (Auth::user()->email??"") === ($comm->email??"") && isset(Auth::user()->email) )
                         <form action="{{asset('delete/'.$comm->id)}}" method="get">
                             {!!csrf_field()!!}
                             <div class="btn-group" role="group" aria-label="Basic example">
@@ -64,9 +55,7 @@
                                         {!!csrf_field()!!}
                                         <div class="form-group">
                                             <div class="modal-body">
-                                                <textarea name="message" cols="150" rows="20">
-                                                {{$comm->message?? ""}}
-                                                </textarea>
+                                                <textarea name="message" cols="150" rows="19">{{$comm->message?? ""}}</textarea>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
@@ -78,7 +67,6 @@
                                 </div>
                             </div>
                         </div>
-
 
                         @elseif (isset($comm->email))
                         <p class="float-right  mt-2" data-toggle="tooltip" data-placement="top" title="Владелец статьи">

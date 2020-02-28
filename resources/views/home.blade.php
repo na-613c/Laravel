@@ -18,13 +18,13 @@
                             <div class="bd-highlight">
                                 Вы вошли под именем <strong>{{ Auth::user()->name }}</strong>.
                             </div>
-                            <div class="bd-highlight"> 
+                            <div class="bd-highlight">
                                 Ваш email: <strong>{{ Auth::user()->email }}</strong>.
                             </div>
                             <div class="mt-auto  bd-highlight">Администрация сайта желает Вам приятного проведения времени. Удачи!</div>
                         </div>
                         <div class="col-md-4" style="height: 290px">
-                            <img src=" https://avatars.mds.yandex.net/get-pdb/1899556/67bafcd1-b06f-4ea0-9c9f-536f9b932577/s600" height="100%" alt="">
+                            <img src="{{asset('img/content_cat.png')}}" height="100%" alt="">
                         </div>
                     </div>
                 </div>

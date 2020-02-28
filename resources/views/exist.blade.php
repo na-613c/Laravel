@@ -48,7 +48,7 @@
 
                     </div>
                     <div class="col-md-5">
-                        <img src="https://cs5.pikabu.ru/images/previews_comm/2015-11_4/1447743003171473167.png" alt="">
+                        <img src="{{asset('img/sad_cat.png')}}" alt="">
                     </div>
                 </div>
             </div>

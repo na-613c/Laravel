@@ -12,7 +12,7 @@
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-  <link rel="shortcut icon" href="https://lh3.googleusercontent.com/proxy/O2cnpQtgUikcMp8Y6qv_9AdtjDW7WJ7H6-dzv3giwkO8XSmiWCsrk5C0NUXk-hoaEMIDiBpi19k0eXaNn87x6OGLg3K3JK6lM5XnoAkpIidDnU2z-Rh3UTnko2nA" type="image/x-icon">
+  <link rel="shortcut icon" href="{{asset('img/shortcut_icon.png')}}" type="image/x-icon">
 
   <!-- Styles -->
   <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -20,43 +20,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-  <script>
-    function startBG() {
-      let colors = ['#ec73a8', '#f29700', '#faef01', '#c1d500', '#9dd1a3', '#00a0ea', '#9fc3e7', '#b1569c'];
-
-      let i = Math.floor(Math.random() * Math.floor(7));
-
-
-      $("body").css({
-        "backgroundColor": `${colors[i]}`,
-      });
-
-
-      $("#search").css({
-        "color": `${colors[i]}`,
-        "border-color": `${colors[i]}`
-      });
-
-      $("#search").hover(function() {
-        $(this).css({
-          "color": "white",
-          "background": `${colors[i]}`
-        })
-      }, function() {
-        $(this).css({
-          "color": `${colors[i]}`,
-          "border-color": `${colors[i]}`,
-          "background": 'white'
-        })
-      });
-
-
-
-
-
-
-    }
-  </script>
+  <script src="{{asset('js/background_color.js')}}"></script>
 
   <style>
     .bd-placeholder-img {
@@ -103,7 +67,6 @@
   <!-- Header -->
   <header>
 
-
     <nav class="navbar navbar-expand-md navbar-light d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white shadow-sm">
       <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
@@ -140,7 +103,8 @@
                   <path fill-rule="evenodd" d="M13.646 13.354a.5.5 0 010-.708L16.293 10l-2.647-2.646a.5.5 0 01.708-.708l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708 0z" clip-rule="evenodd"></path>
                   <path fill-rule="evenodd" d="M6.5 10a.5.5 0 01.5-.5h9a.5.5 0 010 1H7a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
                   <path fill-rule="evenodd" d="M4 15.5A1.5 1.5 0 012.5 14V6A1.5 1.5 0 014 4.5h7A1.5 1.5 0 0112.5 6v1.5a.5.5 0 01-1 0V6a.5.5 0 00-.5-.5H4a.5.5 0 00-.5.5v8a.5.5 0 00.5.5h7a.5.5 0 00.5-.5v-1.5a.5.5 0 011 0V14a1.5 1.5 0 01-1.5 1.5H4z" clip-rule="evenodd"></path>
-                </svg></a>
+                </svg>
+              </a>
             </li>
 
             @if (Route::has('register'))
@@ -175,7 +139,8 @@
             <form action="{{asset('search')}}" method="post" class="form-inline">
               {!!csrf_field()!!}
               <div class="form-group">
-                <input type="search" name="search" class="form-control mr-sm-2" placeholder="Найти" aria-label="Найти">
+                <datalist id="mydata"></datalist>
+                <input autocomplete="off" id="myinput" type="search" name="search" list="mydata" class="form-control mr-sm-2" placeholder="Найти" aria-label="Найти">
               </div>
               <button type="submit" class="btn  my-2 my-sm-0" id="search">Поиск</button>
             </form>
@@ -207,20 +172,17 @@
           Проект на GitHub:
           <a href="https://github.com/na-613c/Laravel" target="_blank"> github.com/na-613c/Laravel </a>
         </div>
-
-
       </div>
     </div>
-    <!-- Copyright -->
-
-
   </footer>
   <!-- Footer -->
 
   <script src="{{ asset('js/jquery-3.4.1.min.js')}}"></script>
   <script src="{{ asset('bootstrap/js/bootstrap.min.js')}}"></script>
-  <script src="{{ asset('bootstrap/js/popper.js')}}"></script>
   <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('js/datalist.js')}}"></script>
+  <script src="{{asset('js/email_list.js')}}"></script>
+
 
 </body>
 

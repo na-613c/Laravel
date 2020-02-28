@@ -40,28 +40,8 @@
       @endforeach
 
 
-      <script>
-        let id = 20;
+      <script src="{{asset('js/img.js')}}"></script>
 
-        function new_img() {
-          id--;
-
-          const rnd = Math.floor(Math.random() * Math.floor(988));
-          const real_id = "#" + id;
-
-          if ($(real_id).length) {
-            $.getJSON(`https://picsum.photos/v2/list?page=${rnd}&limit=1`, function(data) {
-              let imgUrl = data[0].download_url;
-              console.log(1)
-              $(real_id).attr("src", imgUrl)
-            });
-
-          }
-          if (id > 0) new_img();
-        }
-
-        new_img();
-      </script>
 
     </div>
   </div>
