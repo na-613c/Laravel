@@ -1,6 +1,3 @@
-<p align="center"><img src="https://png2.cleanpng.com/sh/1b343ad78b990e67a8b5d87164dec8f3/L0KzQYm3VME5N5psj5H0aYP2gLBuTfxqd59tfdNtLYLkcrPwlL11NaRtgeR9LYDygH7okwQuPZJpT6cAM0bmRLeBUMYvPGE2SasENUG0RYO7UMYyPGo5UKIBOD7zfri=/kisspng-lionhead-rabbit-t-shirt-pop-art-5ad75536c4f806.4011995115240614948068.png" width="400"></p>
-
-
 ## Описание
 
 Сайт создан для просмотра отзывов пользователей о других сайтах. Каждый желающий может сам оставить отзыв о сайте, но для этого ему придется зарегистрироваться. Так же на сайте организован поиск, для более удобного нахождения нужных статей. Поиск производится по названиям cтатей.
